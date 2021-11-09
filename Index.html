@@ -1,0 +1,990 @@
+<!doctype html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,400&family=Work+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+<title>FuturStage</title>
+	<style>
+		
+		
+		html {
+  			scroll-behavior: smooth;
+			overflow: scroll;
+    		overflow-x: hidden;
+		}
+
+		::-webkit-scrollbar {
+   		 	width: 0;  /* Remove scrollbar space */
+   		 	background: transparent;  /* Optional: just make scrollbar invisible */
+}
+		
+		body {
+			margin: 0px;
+			padding: 0px;
+    		background-color: rgb(0,255,132);
+		}
+
+		* {
+ 			 box-sizing:border-box;
+		}
+		
+		.indent-all {
+    		padding-left: 15%;
+  		}
+		
+		.indent-all-plus {
+    		padding-left: 30%;
+  		}
+		
+		.row {
+  			display: flex;
+ 			 flex-wrap: wrap;
+			}
+		
+		#container {
+			position: relative;
+			padding: 2%;
+ 			background-color: rgb(0,0,0);
+			height:100vh;
+		}
+		
+		
+		p {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size:2rem;
+			margin-left:2%;
+			line-height: 2.6rem;
+			hyphens: none;
+		}
+		
+		
+		span {
+          	background: #BBCAD6;
+		}
+		
+		span1 {
+			display: inline-block;
+			font-family: 'Inter', sans-serif;
+			font-size: 1.1rem;
+			font-weight: 500;
+			line-height: inherit;
+			-moz-transform: rotate(135deg);
+    		-ms-transform: rotate(135deg);
+    		-o-transform: rotate(135deg);
+    		-webkit-transform: rotate(135deg);
+    		transform: rotate(135deg);
+		}
+		
+		spanTitolo {
+          	font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size:9.5vw;
+			line-height: 8.5vw;
+		}
+		
+		.testo {
+          	width:80%;
+		}
+		
+		
+		
+		#footer {
+			position: absolute;
+			padding: 2%;
+ 			background-color: rgb(0,0,0);
+			width: 100%;
+			height: auto;
+		}
+		
+		#testofissofoot {
+			position: relative;
+			width:100%;
+			height:10%;
+			padding-top: 30px;
+			background-color: rgb(0,0,0);
+  			font-size: 2rem;
+			line-height: 2.6rem;
+			clear: both;
+		}
+		
+		#box1, #box2, #box3, #box4 {
+			position: relative;
+			flex: 25%;
+			background-color: rgb(0,0,0);
+			padding-right: 1.5%;
+		}
+		
+		
+		p0 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			hyphens: none;
+			color: white;
+			}
+		
+		p1 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1rem;
+			hyphens: none;
+			color: #BBCAD6;
+			line-height: 1.4rem;
+			}
+		
+		p2 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1rem;
+			hyphens: none;
+			color: white;
+		}
+		
+		p3 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			hyphens: none;
+			color: rgb(0,255,132);
+			}
+		
+		p4 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1rem;
+			hyphens: none;
+			color: white;
+			text-align:left;
+		}
+		
+		p5 {
+			font-family: 'DM Sans', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1rem;
+			hyphens: none;
+			color: white;
+			text-align:right;
+		}
+		
+		#myBtn {
+  			display: none;
+  			position: fixed;
+  			bottom: 150px;
+  			right: 2%;
+			height: 60px;
+			width: 60px;
+  			z-index: 99;
+			background-color: Transparent;
+			text-align: center;
+  			border: none;
+  			outline: none;
+			mix-blend-mode: difference;
+			border-radius: 40px;
+  			color: rgb(0,255,132);
+  			cursor: pointer;
+			font-family: 'Inter', sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size:2rem;
+			line-height: 2.6rem;
+			hyphens: none;
+		}
+		
+		#testofisso {
+			position: absolute;
+			bottom: 2%;
+  			left: 2%px;
+  			font-size: 2rem;
+			line-height: 2.6rem;
+		}
+		
+		
+		#divdx {
+				text-align: right;
+				box-sizing: border-box;
+		}
+		
+		#divsx {
+				float: left;
+				position: relative;
+				padding: 0px;
+				box-sizing: border-box;
+		}
+		
+
+		
+		@media screen and (max-width:768px) {
+  		p1, p2 {
+    			font-size:1rem;
+				line-height: 1.4rem;
+  		}
+		}
+			
+		@media screen and (max-width:768px) {
+  		p, #testofisso, #myBtn #testofissofoot {
+    			font-size:1rem;
+				line-height: 1.4rem;
+  		}
+			}
+		
+		@media screen and (max-width:768px) {
+  		#myBtn {
+    			height: 30px;
+				width: 30px;
+				bottom: 70px;
+				font-size:1.1rem;
+  				right: 2%;
+  		}
+			}
+		
+		
+		@media screen and (max-width:1024px) {
+  		#myBtn {
+    			height: 30px;
+				width: 30px;
+				bottom: 120px;
+  				right: 2%;
+				font-size:1.1rem;
+				line-height: 1.4rem;
+  		}
+			}
+		
+		@media screen and (max-width:1255px) {
+  		.testo {
+    			width: 90%;
+  		}
+			
+			}
+
+		
+		@media screen and (max-width:1024px){
+		#box1, #box2, #box3, #box4 {
+				flex: 48%;
+			}
+		#myBtn {
+    			height: 30px;
+				width: 30px;
+				bottom: 135px;
+  				right: 2%;
+				font-size:1.1rem;
+				line-height: 1.4rem;
+  		}
+		}
+		
+		@media screen and (max-width:768px){
+		#box1, #box2, #box3, #box4 {
+				flex: 97%;
+			}
+		#myBtn {
+    			height: 30px;
+				width: 30px;
+				bottom: 125px;
+  				right: 2%;
+				font-size:1.1rem;
+				line-height: 1.4rem;
+		}
+		
+	</style>
+</head>
+
+<body>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+	
+	<div id="container">
+    <img src="Img/Logo.png" width="100%" margin-left="auto" margin-right="auto" alt=""/> 
+		<div id="testofisso">
+	<p0> 
+		Manifesto \ October 2021 
+		</p0>
+		</div>
+	</div>
+	
+		
+	
+	<div class="testo">
+		<p> 
+		<spantitolo> PERFORMANCE <br> IS A HUMAN RIGHT </spantitolo>
+		</p>
+		<p> 
+		Performance isn’t a commodity. It isn’t a luxury. It isn’t something that gets added
+		on top of the flow of life. It doesn’t belong to the ether, to the state or to private funders.
+		It doesn’t belong to the places where it’s performed.
+		</p>
+	
+		<p class="indent-all"> Whether it assumes the form of a streetside improvisation 
+		or a formal staging of a consecrated work from centuries past, 
+		it belongs to <span>the moment.</span>
+		</p>
+	
+		<p> Performance is interstitial and conjunctive: it’s forever 
+		emergent, performed afresh in the act of performing. It’s an 
+		enactment involving sounds, sights, smells, bodies, spaces, time, 
+		and touch. Far from standing apart, it is <span>virtuously entangled</span> 
+		with every other art, from the spatial to the visual.
+		</p>
+		
+		<p class="indent-all"> Performance is a <span>fluid edifice built out of interactions</span>:
+		between performer, production team, and audience;
+ 		between nature and culture; between human
+		and machine; between architecture and living beings.
+		</p>
+		
+		<p> Performance is a <span>human need</span>: for freedom of expression, for forms of fantasy 
+		and make-believe, for a deepened sense of individual and collective belonging, for the 
+		shared experiences upon which communities and commonalities are built. In the hierarchy 
+		of essential human needs, it provides the tools for self-actualization, self-esteem, a sense 
+		of intimacy and of social interconnection within communities and among communities.
+		</p>
+		
+		<p class="indent-all"> Performance is a human right. Not in the familiar Enlightenment sense that too
+		often has smuggled homogenizing realities into universalist ideals at the expense
+		of indigenous cultures and colonized or disenfranchised peoples. It is a “right”
+		freighted with universals and with critical questions such as: how might a right 
+		to performance build on, refine, critique, or repair the postwar human-rights
+		conversation? How does that right scale across the spectrum of the arts from
+		dance to opera, music to theatre, video to streaming media, or with respect 
+		to bottom up vs. top down models of culture? How might it intersect not just the
+		local publics and practices that make up the world of performance but serve
+		as a bridge across peoples, cultures, social classes, and generations? 
+		How might it more equitably translate into a system of property rights for 
+		performers and creators?
+		</p>
+		
+		<p> Because performance is a human right, the right to perform 
+		and to experience performance must become <span>an integral part 
+		of policy planning and economic life</span> embedded into the social fabric of public spaces and civic discourse, especially
+		now as the world grapples with the trauma of pandemic losses 
+		and the need to rebuild a new sense of local and global community and a shared responsibility for the destiny of the planet. 
+		Likewise, as regards educational policy: no child’s education 
+		should be considered complete if they haven’t experienced 
+		the performing arts that are integral to their culture.
+		</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="testo">
+		<p class="indent-all"> 
+			<spantitolo> CONNECTIVE ARCHITECTURES </spantitolo>
+		</p>
+		<p> 
+		Because performance is a fundamental aspect of society, the “stage” (conventionally 
+		understood) is only the most visible, formal outcropping of the multitude of stages that 
+		characterize the life of a community at a given time and place. This is why the future stage
+		cannot be partitioned off or solely aligned with models of performance that were forged 
+		in the recent or remote historical past. This is why <span>the future stage needs to be intimately 
+		entangled with the other stages on which contemporary life is performed</span>, from the streets 
+		and sidewalks to Tiktok and Zoom to the workplace to cultural festivals and fairs.
+		</p>
+		
+		<p class="indent-all"> 
+		Dedicated spaces that support on-site modes of performance cannot, thus, 
+		be just the stages of the past. They must serve as connective tissue between 
+		the intramural and the extramural, between the past, present, and future, 
+		between the onsite and the online. Their physical structure necessarily reflects 
+		this connective identity, even when a given mode of performance may choose 
+		to eschew the digital.
+		</p>
+		
+		<p> 
+		What does such a theater or performance space look like? 
+		What shape should it assume? A multitude of shapes that are site
+		-and context- and genre-specific.
+		</p>
+		
+		
+		<p class="indent-all"> 
+		In setting A, the future stage is <span>a broadcasting laboratory</span> that 
+		builds on the past century of laboratory theaters, communal 
+		gatherings, and rituals. In setting B it’s <span>a production studio</span> where 
+		the audience is front and back, side to side, on stage and off stage, onsite and online. In setting C it’s <span>an interactive, participatory 
+		playground</span> where the real is layered with virtual illusions and dreams. In setting D it’s a <span>distributed “space”</span> that resides only in the cloud where artificial intelligence is the storyteller and only virtual reality persists. In setting E it’s <span>the animation of indoor and outdoor spaces</span> conceived without any reference to becoming stages. In setting F 
+		it’s <span>a stage of the mind</span>, with no need of any other incarnation.
+		</p>
+		
+		<p> 
+		There’s no one answer.
+		</p>
+		
+		<p> 
+		But it’s not enough either to replicate traditional forms or to simply build black
+		boxes, leaving to the future the task of filling them in.
+		</p>
+		
+		<p> 
+		New theater architectures need to place bets and those bets will be
+		<span>interconnected, transmedial, and transcultural.</span>
+		</p>
+		
+	</div>
+	
+	
+	
+		
+	<div class="testo">
+		<p class="indent-all"> 
+		<spantitolo> LIVENESS PLUS </spantitolo>
+		</p>
+		<p> 
+		Among the stages that most powerfully shape contemporary life are those
+		associated with the ubiquity of networks and networked devices, and the many
+		ways in which they are reshaping the contours of human experience and
+		interaction. Whether for performers or audiences, the resulting halo of data
+		streams and algorithms that now surround, inform, and emanate from every
+		human act demands an <span>expanded notion of live performance</span>:
+		what we are calling liveness plus.
+		</p>
+		
+		<p class="indent-all"> 
+		“Liveness” can and must remain an essential attribute of all 
+		spectacle forms both past and present. But “liveness” on the future 
+		stage means grappling with the when, what, and where of 
+		performance under conditions that blur the boundaries <span>between 
+		presence and tele-presence</span>, between the embodied and the 
+		mediated, between human actions and flows of data, between 
+		consciousness and the metaverse.
+		</p>
+		
+		<p> 
+		This expanded mode of staging can no longer be understood 
+		as an afterthought. Rather, it entails the opening up of 
+		new horizons of experience for audiences and performers: 
+		experiences from hitherto unimaginable angles, and 
+		on hitherto unimaginable perceptual or time scales; 
+		<span>events designed to add value to each and every channel 
+		that structures the experience.</span>
+		</p>
+		
+		<p class="indent-all"> 
+		Liveness plus not only needs to be <span>hard-wired into every 
+		future stage</span>, but implies new management, programming, 
+		and business models; new models of inclusivity, access, 
+		and outreach; new governance and ownership models, 
+		as well as legal frameworks. It implies new modes of training 
+		for performers that grapples with the changing nature of 
+		performance itself and the attenuating boundary between performers and audiences. It implies a rethinking of such basic features of artistic practice and the arts economy as the tour.
+		</p>
+		
+	</div>
+	
+	
+	
+	
+		
+	
+
+	<div class="testo">
+		<p> 
+		<spantitolo> THE TOURING <br> TEST </spantitolo>
+		</p>
+		<p class="indent-all"> 
+		Touring remains one of the pillars of the modern performance economy. But touring 
+		is less a human right than a necessity for performers who, due to the expanding 
+		role of labels, publishers, galleries, streaming services, and other intermediaries, 
+		cannot survive on the basis of sales of tickets and recordings alone. This must change.
+		</p>
+	
+		<p> 
+		The harsh realities of climate change demand new models of program
+		development, sharing, sustenance, and distribution… <span>a reinvention of the tour</span>, a
+		reimagining of how we ensure the free movement of ideas and culture across
+		national borders. They suggest that touring, as currently understood, must
+		increasingly become the exception rather than the rule. They demand innovative
+		redefinitions of touring: <span>agile, low cost, telematic, multi-sited</span> modes of
+		performance; cross-border collaborations that leverage the power of digital
+		platforms; performances devised and bundled up so that they can travel from site to site and company to company with sharply reduced human travel; 
+		performer residencies in a concentrated number of hubs instead of costly 
+		city- and continent-hopping. These are but a few glimmers of the future world 
+		of “touring” that underscore an increasingly urgent imperative: in all their 
+		deliberations, cultural policy makers and decision makers today, not to mention artists and production teams, <span>must tackle the carbon footprint of performance.</span>
+		</p>
+		
+	</div>
+	
+	
+		
+			
+	
+	<div class="testo">
+		<p class="indent-all"> 
+		<spantitolo> OWN <br> THE STREAM </spantitolo>
+		</p>
+		<p> 
+		Next comes the question of live streaming, the most widespread default upon which cultural 
+		institutions and performers have relied during the pandemic lockdown. But let’s 
+		enfold within the notion of the “stream” all of those modes of dissemination that enable the 
+		location- and site-specific to travel in space and time; and let’s understand the word “ownership” 
+		in the expanded sense of “embrace,” “recognize,” and “assume responsibility for.”
+		</p>
+		
+		<p class="indent-all"> 
+		As a surrogate for liveness and onsite experience, live streaming has <span>a unique potential 
+		to democratize and de-localize</span> otherwise costly or inaccessible cultural forms. 
+		It is certain to play a key role in the future of performance. But not as a mere add-on 
+		or compromised surrogate for liveness. And not without fundamental changes to existing models of ownership and revenue generation. (As even highly successful artists have 
+		discovered in the course of the pandemic, art today cannot live by streaming alone). 
+		And also not without addressing the profound asymmetries that exist between nations, regions, and generations when it comes to access to broadband, asymmetries that 
+		compromise the future of the performing arts.
+		</p>
+		
+		<p> 
+		To simply broadcast performances that were designed for certain 
+		spaces and on certain scales without adapting or altering them is not 
+		an innovation that taps into the depth or breadth of the digital 
+		media revolution. At best, it is like pouring old wine into new bottles. 
+		At worst, it adulterates the quality of the wine. Streaming fulfils its 
+		promise by reflecting creatively or critically on its specificity, capabilities, and affordances as <span>a new cultural medium.</span> That means exploring a new universe of online experience that is fundamentally different from the onsite even when the two intersect. And intersect they can. This point 
+		of intersection needs to be explored differentially as <span>a value-added 
+		proposition, enriching and animating both online and onsite experiences.</span>
+		</p>
+		
+		<p class="indent-all"> 
+		For streaming to become a key expression of liveness plus, 
+		the stream must become <span>a fully integral feature of every 
+		performance</span>, no less integral or material than the site 
+		of performance, the company, the performers, the atmosphere.
+		Accordingly, it needs to become part of the conceptual and 
+		physical infrastructure of every future stage.
+		</p>
+		
+		<p> 
+		“Own the stream” means multiple things: from the standpoint of audience, engage with 
+		the stream as an integral feature of every performance; from the standpoint of economics, 
+		<span>make the stream support content creation, creators, and performers</span> through new business models; from the architectural standpoint, hardwire the stream’s production into every 
+		future stage in as dynamic, futureproofed a way as is possible.
+		</p>
+		
+		<p class="indent-all"> 
+		Owning the stream is a multilayered endeavor. It implies inclusivity, 
+		co-creation, and democratization, but most of all a reconceptualization 
+		and redistribution of both actual and symbolic capital.
+		</p>
+
+	</div>
+	
+	
+		
+			
+	
+	<div class="testo">
+		<p> 
+		<spantitolo> NEW <br> PERFORMANCE <br> PROFESSIONS</spantitolo>
+		</p>
+		<p class="indent-all"> 
+		Just as the future stage requires new physical architectures, 
+		infrastructures, and modes of performance, it demands new, more versatile and flexible approaches to organizational and business structures, and to performing arts management and staffing.
+		</p>
+		
+	</div>
+	
+		
+
+	<div class="testo">
+		<p> 
+		<spantitolo> SKILLS </spantitolo>
+		</p>
+		<p class="indent-all"> 
+		In place of traditional performance schools, it requires 
+		<span>multi-dimensional, deeply interdisciplinary approaches to training</span>, exploring new kinds of relationship between creation, production, and consumption and, for the new worlds of technically 
+		enhanced liveness, bringing performing and technical training much closer together..
+		</p>
+		
+		<p> 
+		In place of traditional performance directors, it needs to foster <span>a new generation of directors</span> who develop their work with liveness plus as an organic, fully integrated element within the creative process..
+		</p>
+		
+		
+		<p class="indent-all"> 
+		In place of traditional performers, it requires <span>performers to whom the
+		historic boundary separating artists and audiences has become a
+		permeable membrane</span>, and for whom technical and virtual expansion and
+		enrichment of their work has become a daily given.
+		</p>
+		
+		<p> 
+		In place of traditional theater consultants, it imposes <span>an integrated view of performance spaces</span> from a liveness plus perspective, expediting new kinds of relationships between creators, audiences, and interactively minded consumers.
+		</p>
+		
+		<p class="indent-all"> 
+		In place of traditional marketing, it demands 
+		more <span>sophisticated kinds of interactive dialogues with audiences and consumers</span>, personalization, recognition of the extent to which we have moved beyond the traditional impermeable boundaries between artists and audiences.
+		</p>
+		
+		<p> 
+		In place of traditional accountancy-trained finance directors, it requires
+		<span>more sophisticated and inventive kinds of business modellers and revenue architects.</span>
+		</p>
+		
+	</div>
+
+	
+		
+			
+	
+	<div class="testo">
+		<p class="indent-all"> 
+		<spantitolo> STRUCTURES </spantitolo>
+		</p>
+		<p> 
+		Assuming a need for everyone involved in performance to work in
+		interdisciplinary ways, so that new business and organizational structures
+		don’t perpetuate traditional skills divisions.
+		</p>
+		
+		<p class="indent-all"> 
+		Assuming a need to put aside traditional professional hierarchies 
+		(often rooted in historical inequalities and exclusionary centralization 
+		of power and resource distribution) and instead recognize the primacies 
+		arising afresh from new ways of working, with the aim of better 
+		identifying, fostering and, realizing fundamental workflow innovations.
+		</p>
+		
+		
+		<p> 
+		The above considerations are beginning to shape an expanded universe of
+		performance professions for the future stage. Here’s a list, speculative in
+		character, of some of the transmedial roles that may emerge as a result:
+		</p>
+		
+	</div>
+	
+	
+		
+			
+	
+	<div class="testo">
+		
+		<p class="indent-all"> 
+			<spantitolo> 1.</spantitolo> <br>
+		Waiting Room Hypester [=WRH]: The Zoom-era equivalent of <span>a pre-show
+		agitator</span> who greets the audience in the digital waiting room and focuses its
+		attention as it waits for a performance to begin. Whether the hypester
+		operates as an actor, musician, comedian, carnival barker, or magician
+		matters less than that he or she serve as an agent of audience activation
+		and concentration.
+		</p>
+		
+		<p> 
+			<spantitolo> 2.</spantitolo> <br>
+		Virtual Space Realtor [=VSR]: <span>An independent expert in 
+		technological “houses”</span>, VSRs help productions navigate all 
+		available digital platforms and find the combination of softwares/hardwares/programs that best serve a given production’s needs. With strong ties to the world of entertainment tech, they also help to broker mutually beneficial deals that support and sustain the programming stream.
+		</p>
+		
+		<p class="indent-all-plus"> 
+			<spantitolo> 3.</spantitolo> <br>
+		Lag Master General [=LMG]: For the foreseeable 
+		future, visual and auditory latency and glitches are an inevitable part of transmedia and digital
+		performance. Part producer, part technician, the job of the LMG is to make such “irregularities” seem like designed-in features of every performance
+		by means of his or her <span>on-the-fly interventions and improvisations.</span>
+		</p>
+		
+		<p> 
+			<spantitolo> 4.</spantitolo> <br>
+		Live Captioning Maestro [=LCM]: Connected and networked performances 
+		offer the possibility for increased accessibility, as well as for new modes 
+		of expression, by means of captioning. Live captioning comes in many flavors. 
+		It can serve as a support, providing the right balance of textual supports for
+		a performance that might otherwise prove elusive for reasons of language, 
+		historical context, or complexity. It could also serve as <span>a performance mode 
+		in its own right</span>, with captions providing feedback and annotations on the fly, 
+		in pursuit of estranging, comic, or dramatic effects.
+		</p>
+		
+		
+		<p class="indent-all">
+			<spantitolo> 5.</spantitolo> <br>
+		Screenographer [=S+]: <span>A scenographer for screens.</span>
+		Trained to think creatively and critically about the design of digital, 
+		AR, and VR spaces, the Screenographer adapts the skills and
+		tools of a scenic designer to digital environments and explores 
+		new modes of screen/space hybridity.
+		</p>
+	
+		<p class="indent-all-plus"> 
+			<spantitolo> 6.</spantitolo> <br>
+		Accessibility ombudsman [=AO]: The AO is 
+		responsible for ensuring access in all of the senses 
+		of the word: <span>from physical access to facilities for both audience and staff to online access for remote audiences.</span> The responsibilities in question include not just preparation and planning, but also 
+		on-the-spot and on-the-fly problem solving.
+		</p>
+		
+		
+		<p> 
+			<spantitolo> 7.</spantitolo> <br>
+		Performance Doula [=PD]: the PD operates as an on-site producer 
+		whose responsibility is <span>to bring new works into existence 
+		across the analog/digital divide.</span> A creative (not merely technical) 
+		role, the PD seeks to interpret a given performance in ways that 
+		reconcile site- and space-specificity and the need for capture, 
+		broadcasting, and remote viewing.
+		</p>
+		
+		
+		<p class="indent-all"> 
+			<spantitolo> 8.</spantitolo> <br>
+		Metabundler [=MB]: involved in the design of a performance 
+		from the outset, the MB is responsible for creating the necessary 
+		toolkit, documentation, and technical supports that will 
+		render it <span>shippable and suitable for multiple venues</span>, reducing 
+		or eliminating the need forpersonnel to travel with the show.
+		</p>
+		
+	</div>
+	
+	
+		
+
+	<div class="testo">
+		<p> 
+		<spantitolo> NEW FUNDING <br> MODELS </spantitolo>
+		</p>
+		<p class="indent-all"> 
+		Performing arts financing is broken; broken in a multitude of ways. It innovates as
+		an afterthought. It allocates resources asymmetrically, on the basis of precedent,
+		often with scant regard for shifting demographics and societal change. 
+		Instead of thinking ahead, it thinks backward. And it underestimates the role 
+		of cultural institutions as drivers of value creation beyond local and regional 
+		economic development.
+		</p>
+		
+		<p> 
+		What needs to be reinvented? Most everything.
+		</p>
+		
+		<p class="indent-all"> 
+		– <span>Public funding remains as essential as ever</span> because the future stage demands innovation (the costs associated with building
+		state-of-the-art new venues or revitalizing old stages will NEVER 
+		be captured by ticket revenues alone).
+		</p>
+		
+		<p> 
+		– The precondition for public funding must be not tradition or precedent, but <span>INNOVATION and NEW AUDIENCE BUILDING.</span> Too many of the most august institutions in the performing arts have become backward looking and self-referential, and there’s an urgent need for participatory and community-based mechanisms for the allocation of resources at the local and national level, as well as for imaginative 
+		thinking about both local and international partnerships.
+		</p>
+		
+		<p class="indent-all"> 
+		– Private funding is more welcome than ever: not to replace 
+		public funding but instead to complement it (and especially 
+		<span>to serve as an agent of disruption and revitalization).</span>
+		</p>
+		
+		<p class="indent-all"> 
+		– The fiscal regimes that govern the performing arts sector are out of date, focusing 
+		on local value-creation (for our city, our region etc.). Rarely, if ever, do they tap into 
+		<span>the full range of potential revenue streams</span>, leaving money on the table, 
+		most often to the detriment of artists (too often treated as mere “cost-factors”).
+		</p>
+		
+		<p> 
+		– Most Value Added Tax systems class the performing arts as a luxury good
+		(that’s just plain wrong: PERFORMANCE IS AN <span>ESSENTIAL GOOD).</span>
+		</p>
+		
+		<p class="indent-all">
+		–  Sponsorship models remain sclerotic, ill-suited to current needs. 
+		The time for contributing money in return for featuring corporate 
+		logos is past. <span>New partnership models</span> are needed that create genuine 
+		value both for sponsors and recipients of sponsor funds.
+		</p>
+		
+		<p> 
+		– Innovation in financing and intellectual property rights management is urgently 
+		needed <span>(it’s time to experiment with alternative models from crowdfunding to 
+		decentralized autonomous organizations and/or NFTs).</span>
+		</p>
+		
+		<p class="indent-all">
+		What will happen if new funding models aren’t embraced to build, support, and sustain the 
+		future stage? Physical venues will languish. Future audiences will gradually abandon them. They will come to know the performing arts on the screen alone. BUT <span>the screen and 
+		the stream are the best friends of the future stage:</span> the very means by which liveness can 
+		be reinvented and renewed in its foundational role ...as liveness plus.
+		</p>
+	</div>
+	
+	
+	
+		
+
+	<div class="testo">
+		<p> 
+		<spantitolo> TAKEAWAYS </spantitolo>
+		</p>
+		<p class="indent-all"> 
+		– THE FUTURE STAGE DEMANDS NEW ARCHITECTURAL, ORGANIZATIONAL,
+		AND HUMAN INFRASTRUCTURES (new physical plants, new funding models, new
+		professional roles).
+		</p>
+		
+		<p> 
+		– LIVENESS PLUS IS THE NORM ON THE FUTURE STAGE (let’s double down and
+		build an ecosystem that promotes inclusivity, enhanced access, and reduced
+		costs, along with participatory modes of performance and audience interaction).
+		</p>
+		
+		<p class="indent-all"> 
+		– FUTURE AUDIENCES FOR THE FUTURE STAGE (they need to be cultivated, 
+		they need to be welcomed, only fresh approaches to programming will 
+		bring them into being).
+		</p>
+		
+		<p> 
+		– STREAMING IS A CREATIVE MEDIUM (NOT A SUPPORT) ON THE FUTURE
+		STAGE (let’s explore its medium-specificity).
+		</p>
+		
+		<p class="indent-all"> 
+		– THE FUTURE STAGE DEMANDS BETTER, FAIRER, MORE CREATIVE DIGITAL
+		PLATFORMS (in support of content creators and audience participation; platforms
+		that promote equitable and distributed ownership models for cultural content).
+		</p>
+		
+		<p> 
+		– Like the stages of the past, THE FUTURE STAGE REQUIRES BOTH PUBLIC 
+		AND PRIVATE FUNDING BUT WITH A RAZOR-SHARP FOCUS ON BUILDING NEW
+		AUDIENCES.
+		</p>
+	
+		<p class="indent-all"> 
+		<span>...most important of all...</span> <br> <br>
+		THE FUTURE STAGE IS NOW (there can be no post-pandemic return to the old
+		“normal,” which was already broken; the time for courage, vision, and action is
+		NOW).<br><br><br>
+		</p>
+	
+	</div>
+	
+	
+	
+	<div id="footer">
+<div class="row">
+		
+	<div id="box1">
+		<p1>
+			<p3>The project is coordinated by Jeffrey Schnapp and Paolo Petrocelli <br><br><br>
+</p3>
+			<p2>Members of Research Group<br><span1>↑</span1></p2><br><br>
+			<p2>Matthew Battles (USA)</p2><br>
+				Director of Scholarly Initiatives,
+				metaLAB (at) Harvard <br><br>
+			<p2>Cathie Boyd (Ireland/Scotland)</p2><br>
+				Founder & Artistic Director,
+ 				Cryptic <br><br>
+			<p2>Marc Brickman (USA) </p2> <br>
+				Managing Director,
+				Tactical Manoeuvre<br><br>
+			<p2>Paolo Ciuccarelli (Italy/USA)</p2> <br> Founding Director, Center for Design,
+ 				Northeastern University, Boston <br><br>
+			<p2>Wesley Cornwell (USA) </p2> <br>
+				Harvard Graduate School of Design<br><br>
+		</p1>
+	</div>
+		
+	<div id="box2">
+		<p1>
+			<p2>Lins Derry (USA) </p2> <br> Prinicipal,
+				metaLAB (at) Harvard <br><br>
+			<p2>Evenlyn Ficarra (UK) </p2> <br>
+				Associate Director, Centre for Research in Opera and Music Theatre, University of Sussex <br><br>
+			<p2>Mariana Ibañez (Argentina/USA) </p2><br>
+				Chair and Associate Professor, Architecture and Urban Design, <br>
+				UCLACo-founder, Ibañez Kim <br><br>
+ 			<p2>Simone Kim (USA) </p2><br> 
+				Director, Immersive Kinematics Research Group; <br>
+				Co-founder, 
+				Ibañez Kim <br><br>
+			<p2>Mohammed Obaidullah (Saudi Arabia)</p2><br>
+				Producer <br><br>
+ 			<p2>Paolo Petrocelli (Italy)</p2><br> Research Affiliate,
+ 				metaLAB at Harvard <br><br>
+		</p1>
+		
+	</div>
+		
+	<div id="box3">
+		<p1>
+			<p2>Jay Pather (South Africa)</p2><br> Director, Institute for Creative Arts,
+				University of Cape Town <br><br>
+ 			<p2>Cui Qiao (China)</p2><br> 
+				President, Beijing Contemporary Art Foundation <br><br>
+ 			<p2>Magda Romanska (USA)</p2><br>
+				Associate Professor of Theatre Studies and Dramaturgy, Emerson College; <br> 
+				Executive Director and Editor-in-Chief, TheTheatreTimes.com <br><br>
+			<p2>Adama Sanneh (ITA)</p2><br> 
+				Co-Founder and CEO, Moleskine Foundation <br><br>
+ 			<p2>Anthony Sargent (UK)</p2><br>  
+				International Cultural Consultant<br><br>
+			<p2>Jeffrey Schnapp (USA)</p2><br> 
+				Faculty Director, metaLAB (at) Harvard <br><br>
+		</p1>	
+	</div>
+		
+		<div id="box4">
+		<p1>
+			<p2>Shain Shapiro (UK)</p2><br> 
+				Founder & CEO, Sound Diplomacy <br><br>
+			<p2>Sydney Skybetter (USA)</p2><br> 
+				Founder, Conference for Research on Choreographic Interfaces <br><br>
+ 			<p2>Jean-Philippe Thiellay (France)</p2><br>
+				President, Centre national de la musique <br><br>
+ 			<p2>Shahrokh Yadegari(USA)</p2><br>
+				Director, Sonic Arts Research and Development group
+				at the University of California San Diego; <br>
+				Initiative for Digital Exploration of Arts and Sciences 
+				at the Qualcomm Institute<br>
+			
+		</p1>
+</div>			
+</div>
+		
+		<div id="testofissofoot">
+			
+			<hr color="white">
+			<div id="divsx">
+				<p4>Website design by xycomm</p4>
+			</div>
+			
+			<div id="divdx">
+			<p5>FuturStage ©2021</p5>
+				</div>
+	
+		</div>	
+
+	</div>
+	
+<script>
+	//Get the button
+	var mybutton = document.getElementById("myBtn");
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    	mybutton.style.display = "block";
+  		} 
+		else {
+    	mybutton.style.display = "none";
+  		}
+		}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+  		document.body.scrollTop = 0;
+  		document.documentElement.scrollTop = 0;
+		}
+</script>
+	
+	
+</body>
+</html>
